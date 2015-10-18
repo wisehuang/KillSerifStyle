@@ -1,0 +1,408 @@
+/* 已停止在 PASTEBIN 發布更新，新的更新和維護將轉移至 https://userstyles.org/styles/111687 */
+
+/* Name: KillSerif Style | Custom font with font-face to Sans Serif font for Firefox */
+/* 使用者仍須到〔選項〕→〔內容〕中把「中文－台灣」和「中文－簡體」設定為微軟正黑體 */
+/* @font-face 程式碼源自「第三新夜市仔」
+ http://blog.yorkxin.org/2012/06/17/assign-fonts-for-specific-characters */
+/* 排除網址之正規表示法由 ettoolong 提供 */
+@charset "UTF-8";
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document regexp("((?!chrome://|telnet://).)*") /* 設定要排除的網址／網站 */
+{
+    
+    /* Normal Font Weight */
+
+    @font-face {
+        font-family: "Times New Roman";
+        font-weight: 400;
+        unicode-range: U+4E00-9FFF;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+    
+    @font-face {
+        font-family: "Arial";
+        font-weight: 400;
+        unicode-range: U+4E00-9FFF;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "monospace";
+        font-weight: 400;
+        src: local("Consolas"), local("MingLiU");
+    }
+    
+    @font-face {
+        font-family: "SimSun";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "宋体";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "SimHei";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "NSimSun";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "FangSong";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "KaiTi";
+        font-weight: 400;
+        src: local("DFKai-SB"), local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "楷体";
+        font-weight: 400;
+        src: local("DFKai-SB"), local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "Microsoft YaHei";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "微?雅黑";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "黑体";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "PMingLiU";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "新細明體";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    /* 來自 ccs.hanzi.co 的解決方案，但目前似乎在回退機制上有點問題出現，解除註解可以讓 KillsSerif Style 處理這些字型 */
+    @font-face {
+        font-family: "Biaodian Pro Sans";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+    
+    @font-face {
+        font-family: "Biaodian Pro Serif";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "Biaodian Pro Sans CNS";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "Biaodian Pro Serif CNS";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "Biaodian Pro Sans GB";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "Biaodian Pro Serif GB";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "Biaodian Sans";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "Biaodian Serif";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    /* 細明體是 Windows 系統下的中文等寬字型，因此如非必要，不建議替換成黑體
+    @font-face {
+        font-family: "MingLiU";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "細明體";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+    */
+    
+    /* 針對蘋果作業系統 */
+    @font-face {
+        font-family: "Heiti TC";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+    
+    @font-face {
+        font-family: "Heiti SC";
+        font-weight: 400;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+    
+    
+    /* Bold Font Weight */
+
+    @font-face {
+        font-family: "Times New Roman";
+        font-weight: 700;
+        unicode-range: U+4E00-9FFF;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+    
+    @font-face {
+        font-family: "Arial";
+        font-weight: 700;
+        unicode-range: U+4E00-9FFF;
+        src: local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "monospace";
+        font-weight: 700;
+        src: local("Consolas"), local("MingLiU");
+    }
+    
+    @font-face {
+        font-family: "SimSun";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "宋体";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "SimHei";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "NSimSun";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "FangSong";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "KaiTi";
+        font-weight: 700;
+        src: local("DFKai-SB"), local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "楷体";
+        font-weight: 700;
+        src: local("DFKai-SB"), local("Microsoft JhengHei"), local('Source Han Sans TC Regular'), local('Source Han Sans Regular'), local('Source Han Sans TWHK Regular'), local('Noto Sans CJK Regular'), local('Noto Sans T Chinese Regular');
+    }
+
+    @font-face {
+        font-family: "Microsoft YaHei";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "Microsoft YaHei UI";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "微?雅黑";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "黑体";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "PMingLiU";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "新細明體";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    /* 來自 ccs.hanzi.co 的解決方案，但目前似乎在回退機制上有點問題出現，解除註解可以讓 KillsSerif Style 處理這些字型 */
+    @font-face {
+        font-family: "Biaodian Pro Sans";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+    
+    @font-face {
+        font-family: "Biaodian Pro Serif";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+    
+    @font-face {
+        font-family: "Biaodian Pro Sans CNS";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+    
+    @font-face {
+        font-family: "Biaodian Pro Serif CNS";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+    
+    @font-face {
+        font-family: "Biaodian Pro Sans GB";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+    
+    @font-face {
+        font-family: "Biaodian Pro Serif GB";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+    
+    @font-face {
+        font-family: "Biaodian Sans";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+    
+    @font-face {
+        font-family: "Biaodian Serif";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    /* 細明體是 Windows 系統下的中文等寬字型，因此如非必要，不建議替換成黑體
+    @font-face {
+        font-family: "MingLiU";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    @font-face {
+        font-family: "細明體";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+    */
+    
+    /* 針對蘋果作業系統 */
+    @font-face {
+        font-family: "Heiti TC";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+    
+    @font-face {
+        font-family: "Heiti SC";
+        font-weight: 700;
+        src: local("Microsoft JhengHei Bold"), local('Source Han Sans TC Regular Bold'), local('Source Han Sans Regular Bold'), local('Source Han Sans TWHK Regular Bold'), local('Noto Sans CJK Regular Bold'), local('Noto Sans T Chinese Regular Bold');
+    }
+
+    /* 文字陰影效果，開啟後會有文字加粗的感覺，粗度建議範圍0.001~0.01em */
+    body {
+        text-shadow: 0 0 0.028em;
+    }    
+}
+/* 此 UserStyle 由 t7yang 整合網路上各方網友的創意，
+目的為透過 font-face 語法來讓使用者自訂瀏覽器要使用字型 */
+
+
+/*
+問題回報：任何問題請寫信至t7yang（小老鼠）ymail點com
+
+更新記錄：
+
+2015/03/18
+3.3        新增：「楷体」字型對應
+            新增：「Microsoft YaHei UI」字型對應
+            新增：因 ccs.hanzi.co 的解決方案似乎在 Firefox 上的回退會有問題，所以新增對其字型的處理（先納入處理項目，觀察期間接受使用者的回應，若有問題下一版會改為註解）
+3.2        修正：因應思源體更新使 Firefox 瀏覽器不再需要使用「Bold Bold」來顯示粗體而做出相應修正（感謝 wcw5504 提供）
+3.1        修正：字重700的楷體對應修正為相應的字重字型
+2014/08/31
+3.0        新增：「微?雅黑」字型對應
+            新增：「黑体」字型對應
+            新增：增加所有思源體和其衍生字型對應（感謝 wcw5504 提供）
+            新增：Heiti TC & Heiti SC 對應，納入 OSX 中文字型支援，正黑體優先乃考量 Windows 使用者有安裝思源體（待測試）
+            新增：針對 400 和 700 字重做特殊處理（待測試，感謝 wcw5504 提供）
+            調整：移除文字陰影效果的色彩指定、縱橫軸偏移、調整模糊度至0.001em（模糊度建議範圍0.001~0.01em）
+            移除：移除 Arial 字型對應、註解 Times New Roman 字型
+2.0        調整：移除所有「LiHei Pro」和「DroidSansFallback」字型，並加入開放黑體字型「思源體」且排序提升至「微軟正黑體」後
+            調整：名稱由「MS JhengHei Style」改為「KillSerif Style」
+            新增：「宋体」（SimSun）字型對應，解決有些中國大陸網站使用中文字型名稱時無法對應的問題
+            修正：在Stylish圖示中無法正常顯示運作中樣式表的問題（感謝批踢踢板友Mayuyu提供解決方案）
+1.8        新增：「新細明體」字型對應，解決有些網站使用中文字型名稱時無法對應的問題
+            註解：細明體（MingLiu）對應，因細明體屬於等寬字型，強制對應為微軟正黑體可能會出現問題
+1.7        新增：中文字型「細明體」（MingLiU）
+1.6        新增：新增註解式陰影效果，想要陰影效果的朋友請自行拿掉註解
+1.5        移除：text-shadow 陰影效果
+1.4        修正：標楷體對應錯誤
+1.3        新增：對應「NSimSong」、「FangSong」、「KaiTi」（優先對應「標楷體」）簡中字型
+            修改：HeiTi TC → LiHei Pro（因 HeiTi TC 無簡中字型）
+1.2        新增：「Droid Sans Fallback」針對其他作業系統的使用者
+1.1        新增：英文字型「Arial」和「Times New Roman」的中文字型對應
+1.0        釋出
+
+授權方式：
+創用CC之姓名標示─非商業性─相同方式分享
+
+本授權條款允許使用者重製、散布、傳輸以及修改著作，但不得為商業目的之使用。若使用者修改該著作時，僅得依本授權條款或與本授權條款類似者來散布該衍生作品。使用時必須按照著作人指定的方式表彰其姓名。
+*/
